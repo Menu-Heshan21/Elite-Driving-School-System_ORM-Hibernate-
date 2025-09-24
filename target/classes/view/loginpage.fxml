@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.Loginpage"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: linear-gradient(to bottom right, #FFFFFF, #F8F9FA);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginpageController">
 
+    <children>
+        <HBox alignment="CENTER" layoutX="50.0" layoutY="10.0" spacing="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0" />
+
+        <Label layoutX="34.0" layoutY="79.0" style="-fx-text-fill: #2C3E50;" text="Select Your Role" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="79.0">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+
+        <HBox alignment="CENTER" spacing="50.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+
+        <ImageView fitHeight="170.0" fitWidth="199.0" layoutX="316.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/elite driving school logo.png" />
+            </image>
+        </ImageView>
+
+        <Button layoutX="50.0" layoutY="220.0" onAction="#btnAdminOnAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-radius: 8; -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 10, 0, 0, 3); -fx-cursor: hand;" text="Admin" />
+
+        <Button layoutX="326.0" layoutY="220.0" onAction="#btnReceptionOnAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #27AE60; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-radius: 8; -fx-effect: dropshadow(gaussian, rgba(39,174,96,0.3), 10, 0, 0, 3); -fx-cursor: hand;" text="Receptionist" />
+      <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="14.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/admin icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="288.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/receptionist icon.png" />
+         </image>
+      </ImageView>
+    </children>
 </AnchorPane>

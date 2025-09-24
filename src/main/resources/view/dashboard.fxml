@@ -13,47 +13,55 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: white;" stylesheets="@../css/Dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardController">
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #F8FAFC;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardController">
     <children>
 
-        <!-- Navigation Menu -->
-        <VBox prefHeight="800.0" prefWidth="280.0" styleClass="navigation-menu" style="-fx-background-color: #1a237e;">
+        <!-- Sidebar Navigation -->
+        <VBox prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 3, 0);">
             <children>
 
-                <!-- Logo Section -->
-                <VBox alignment="CENTER" prefHeight="120.0" prefWidth="280.0" style="-fx-background-color: #0d47a1;">
+                <!-- Header Section -->
+                <VBox alignment="CENTER" prefHeight="180.0" prefWidth="250.0" style="-fx-background-color: #3B82F6; -fx-background-radius: 0 0 20 20;">
                     <children>
-                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/driving-school.png" />
+                                <Image url="@../images/elite driving school logo.png" />
                             </image>
                         </ImageView>
-                        <Label text="ELITE DRIVING SCHOOL" textFill="WHITE" textAlignment="CENTER">
+                        <Label text="ELITE DRIVING SCHOOL" textAlignment="CENTER" textFill="WHITE">
                             <font>
-                                <Font name="Arial Bold" size="14.0" />
+                                <Font name="System Bold" size="14.0" />
                             </font>
                             <VBox.margin>
                                 <Insets top="5.0" />
                             </VBox.margin>
                         </Label>
+                        <Label text="Management System" textAlignment="CENTER" textFill="#E0F2FE">
+                            <font>
+                                <Font name="System" size="10.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="2.0" />
+                            </VBox.margin>
+                        </Label>
                     </children>
                     <VBox.margin>
-                        <Insets bottom="20.0" />
+                        <Insets bottom="15.0" />
                     </VBox.margin>
                 </VBox>
 
                 <!-- Navigation Buttons -->
-                <Button fx:id="dashboardBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="45.0" prefWidth="280.0" styleClass="btn-nav" text="DASHBOARD" textFill="WHITE">
+                <Button fx:id="rolebtn" alignment="CENTER_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#btnRoleOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" text="ROLES" textFill="#64748B">
                     <VBox.margin>
-                        <Insets bottom="8.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" />
                     </VBox.margin>
                     <font>
-                        <Font name="Arial" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/dashboard.png" />
+                                <Image url="@../images/dashboard/roles.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -61,21 +69,21 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                     <padding>
-                        <Insets left="30.0" />
+                        <Insets left="15.0" />
                     </padding>
                 </Button>
 
-                <Button fx:id="instructorBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnInstructorOnAction" prefHeight="45.0" prefWidth="280.0" styleClass="btn-nav" text="INSTRUCTORS" textFill="WHITE">
+                <Button fx:id="userBtn" alignment="CENTER_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" text="USERS" textFill="#64748B">
                     <VBox.margin>
-                        <Insets bottom="8.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" />
                     </VBox.margin>
                     <font>
-                        <Font name="Arial" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/instructor.png" />
+                                <Image url="@../images/dashboard/users.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -83,21 +91,21 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                     <padding>
-                        <Insets left="30.0" />
+                        <Insets left="15.0" />
                     </padding>
                 </Button>
 
-                <Button fx:id="courseBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnCourseOnAction" prefHeight="45.0" prefWidth="280.0" styleClass="btn-nav" text="COURSES" textFill="WHITE">
+                <Button fx:id="instructorBtn" alignment="CENTER_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#btnInstructorOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" text="INSTRUCTORS" textFill="#64748B">
                     <VBox.margin>
-                        <Insets bottom="8.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" />
                     </VBox.margin>
                     <font>
-                        <Font name="Arial" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/course.png" />
+                                <Image url="@../images/dashboard/instructor.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -105,21 +113,21 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                     <padding>
-                        <Insets left="30.0" />
+                        <Insets left="15.0" />
                     </padding>
                 </Button>
 
-                <Button fx:id="studentBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnStudentOnAction" prefHeight="45.0" prefWidth="280.0" styleClass="btn-nav" text="STUDENTS" textFill="WHITE">
+                <Button fx:id="coursesBtn" alignment="CENTER_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#btnCourseOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" text="COURSES" textFill="#64748B">
                     <VBox.margin>
-                        <Insets bottom="8.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" />
                     </VBox.margin>
                     <font>
-                        <Font name="Arial" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/student.png" />
+                                <Image url="@../images/dashboard/courses.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -127,21 +135,21 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                     <padding>
-                        <Insets left="30.0" />
+                        <Insets left="15.0" />
                     </padding>
                 </Button>
 
-                <Button fx:id="lessonBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnLessonOnAction" prefHeight="45.0" prefWidth="280.0" styleClass="btn-nav" text="LESSONS" textFill="WHITE">
+                <Button fx:id="studentBtn" alignment="CENTER_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#btnStudentOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" text="STUDENTS" textFill="#64748B">
                     <VBox.margin>
-                        <Insets bottom="8.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" />
                     </VBox.margin>
                     <font>
-                        <Font name="Arial" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/lesson.png" />
+                                <Image url="@../images/dashboard/student.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -149,21 +157,21 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                     <padding>
-                        <Insets left="30.0" />
+                        <Insets left="15.0" />
                     </padding>
                 </Button>
 
-                <Button fx:id="paymentBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnPaymentOnAction" prefHeight="45.0" prefWidth="280.0" styleClass="btn-nav" text="PAYMENTS" textFill="WHITE">
+                <Button fx:id="lessonBtn" alignment="CENTER_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#btnLessonOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" text="LESSONS" textFill="#64748B">
                     <VBox.margin>
-                        <Insets bottom="8.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" />
                     </VBox.margin>
                     <font>
-                        <Font name="Arial" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/payment.png" />
+                                <Image url="@../images/dashboard/lessons.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -171,21 +179,21 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                     <padding>
-                        <Insets left="30.0" />
+                        <Insets left="15.0" />
                     </padding>
                 </Button>
 
-                <Button fx:id="reportBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="45.0" prefWidth="280.0" styleClass="btn-nav" text="REPORTS" textFill="WHITE">
+                <Button fx:id="paymentBtn" alignment="CENTER_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#btnPaymentOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" text="PAYMENTS" textFill="#64748B">
                     <VBox.margin>
-                        <Insets bottom="8.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" />
                     </VBox.margin>
                     <font>
-                        <Font name="Arial" size="13.0" />
+                        <Font name="System Bold" size="12.0" />
                     </font>
                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/report.png" />
+                                <Image url="@../images/dashboard/payment-method.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -193,71 +201,81 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                     <padding>
-                        <Insets left="30.0" />
+                        <Insets left="15.0" />
                     </padding>
                 </Button>
 
-                <!-- Spacer -->
-                <VBox prefHeight="200.0" prefWidth="280.0" />
-
-                <Button fx:id="logoutBtn" alignment="CENTER_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="45.0" prefWidth="280.0" styleClass="btn-nav" text="LOGOUT" textFill="WHITE" style="-fx-background-color: #c62828;">
-                    <VBox.margin>
-                        <Insets bottom="20.0" />
-                    </VBox.margin>
-                    <font>
-                        <Font name="Arial" size="13.0" />
-                    </font>
-                    <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../Images/Icons/Dashboard Icons/logout.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
-                    <padding>
-                        <Insets left="30.0" />
-                    </padding>
-                </Button>
+                <!-- Spacer to push logout button to bottom -->
+                <VBox prefHeight="100.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+               <children>
+      
+                      <!-- Logout Button -->
+                      <Button fx:id="logoutBtn" alignment="CENTER_LEFT" graphicTextGap="12.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: #FEF2F2; -fx-background-radius: 10; -fx-border-color: #EF4444; -fx-border-width: 1; -fx-border-radius: 10;" text="LOGOUT" textFill="#DC2626">
+                          <VBox.margin>
+                              <Insets bottom="20.0" left="15.0" right="15.0" />
+                          </VBox.margin>
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                          <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../images/dashboard/logout.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                          <padding>
+                              <Insets left="15.0" />
+                          </padding>
+                      </Button>
+               </children></VBox>
 
             </children>
         </VBox>
 
         <!-- Main Content Area -->
-        <AnchorPane fx:id="mainContentPane" layoutX="280.0" prefHeight="800.0" prefWidth="1120.0" style="-fx-background-color: #f5f5f5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane fx:id="mainContentPane" layoutX="250.0" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #F8FAFC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
 
-                <!-- Header -->
-                <Label layoutX="30.0" layoutY="20.0" text="Dashboard Overview" textFill="#1a237e">
+                <!-- Header Section -->
+                <Label layoutX="30.0" layoutY="30.0" text="Dashboard Overview" textFill="#1E293B">
                     <font>
-                        <Font name="Arial Bold" size="28.0" />
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="30.0" layoutY="70.0" text="Welcome to Elite Driving School Management System" textFill="#64748B" AnchorPane.leftAnchor="30.0">
+                    <font>
+                        <Font name="System" size="14.0" />
                     </font>
                 </Label>
 
                 <!-- Statistics Cards -->
-                <HBox layoutX="30.0" layoutY="70.0" prefHeight="120.0" prefWidth="1060.0" spacing="20.0">
+                <HBox layoutX="30.0" layoutY="110.0" prefHeight="120.0" prefWidth="890.0" spacing="20.0">
                     <children>
-                        <!-- Total Instructors Card -->
-                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+
+                        <!-- System Users Card -->
+                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="210.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 3);">
                             <children>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Images/Icons/Dashboard Icons/instructor-stats.png" />
+                                        <Image url="@../images/dashboard/users.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="totalInstructorsLabel" text="25" textFill="#1a237e">
+                                <Label fx:id="totalUsersLabel" text="15" textFill="#3B82F6">
                                     <font>
-                                        <Font name="Arial Bold" size="24.0" />
+                                        <Font name="System Bold" size="24.0" />
                                     </font>
                                     <VBox.margin>
-                                        <Insets top="5.0" />
+                                        <Insets top="8.0" />
                                     </VBox.margin>
                                 </Label>
-                                <Label text="Total Instructors" textFill="#666666">
+                                <Label fx:id="systemuserId" text="System Users" textFill="#64748B">
                                     <font>
-                                        <Font name="Arial" size="12.0" />
+                                        <Font name="System" size="12.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -266,25 +284,25 @@
                             </padding>
                         </VBox>
 
-                        <!-- Total Students Card -->
-                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+                        <!-- Active Instructors Card -->
+                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="210.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 3);">
                             <children>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Images/Icons/Dashboard Icons/student-stats.png" />
+                                        <Image url="@../images/dashboard/instructor.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="totalStudentsLabel" text="150" textFill="#1a237e">
+                                <Label fx:id="totalInstructorsLabel" text="25" textFill="#10B981">
                                     <font>
-                                        <Font name="Arial Bold" size="24.0" />
+                                        <Font name="System Bold" size="24.0" />
                                     </font>
                                     <VBox.margin>
-                                        <Insets top="5.0" />
+                                        <Insets top="8.0" />
                                     </VBox.margin>
                                 </Label>
-                                <Label text="Total Students" textFill="#666666">
+                                <Label fx:id="activeinstructorId" text="Active Instructors" textFill="#64748B">
                                     <font>
-                                        <Font name="Arial" size="12.0" />
+                                        <Font name="System" size="12.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -293,25 +311,25 @@
                             </padding>
                         </VBox>
 
-                        <!-- Total Lessons Card -->
-                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+                        <!-- Enrolled Students Card -->
+                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="210.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 3);">
                             <children>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Images/Icons/Dashboard Icons/lesson-stats.png" />
+                                        <Image url="@../images/dashboard/student.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="totalLessonsLabel" text="89" textFill="#1a237e">
+                                <Label fx:id="totalStudentsLabel" text="150" textFill="#F59E0B">
                                     <font>
-                                        <Font name="Arial Bold" size="24.0" />
+                                        <Font name="System Bold" size="24.0" />
                                     </font>
                                     <VBox.margin>
-                                        <Insets top="5.0" />
+                                        <Insets top="8.0" />
                                     </VBox.margin>
                                 </Label>
-                                <Label text="Lesson Schedules" textFill="#666666">
+                                <Label fx:id="entrollestudentId" text="Enrolled Students" textFill="#64748B">
                                     <font>
-                                        <Font name="Arial" size="12.0" />
+                                        <Font name="System" size="12.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -321,24 +339,24 @@
                         </VBox>
 
                         <!-- Monthly Revenue Card -->
-                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+                        <VBox alignment="CENTER" prefHeight="120.0" prefWidth="210.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 3);">
                             <children>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Images/Icons/Dashboard Icons/revenue-stats.png" />
+                                        <Image url="@../images/dashboard/revenue.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="monthlyRevenueLabel" text="LKR 2,250,000" textFill="#1a237e">
+                                <Label fx:id="monthlyRevenueLabel" text="LKR 2,250,000" textFill="#8B5CF6">
                                     <font>
-                                        <Font name="Arial Bold" size="20.0" />
+                                        <Font name="System Bold" size="16.0" />
                                     </font>
                                     <VBox.margin>
-                                        <Insets top="5.0" />
+                                        <Insets top="8.0" />
                                     </VBox.margin>
                                 </Label>
-                                <Label text="Monthly Revenue" textFill="#666666">
+                                <Label fx:id="monthlyrevenueId" text="Monthly Revenue" textFill="#64748B">
                                     <font>
-                                        <Font name="Arial" size="12.0" />
+                                        <Font name="System" size="12.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -350,53 +368,62 @@
                 </HBox>
 
                 <!-- Quick Actions Section -->
-                <Label layoutX="30.0" layoutY="220.0" text="Quick Actions" textFill="#1a237e">
+                <Label layoutX="30.0" layoutY="260.0" text="Quick Actions" textFill="#1E293B">
                     <font>
-                        <Font name="Arial Bold" size="20.0" />
+                        <Font name="System Bold" size="20.0" />
                     </font>
                 </Label>
 
-                <HBox layoutX="30.0" layoutY="250.0" prefHeight="60.0" prefWidth="1060.0" spacing="15.0">
+                <HBox layoutX="30.0" layoutY="290.0" prefHeight="60.0" prefWidth="890.0" spacing="15.0">
                     <children>
-                        <Button fx:id="quickInstructorBtn" mnemonicParsing="false" onAction="#quickInstructorAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #1976d2; -fx-background-radius: 8;" text="+ Instructor" textFill="WHITE">
+                        <Button fx:id="quickUserBtn" mnemonicParsing="false" onAction="#quickUserAction" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #3B82F6; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.3), 6, 0, 0, 2);" text="+ User" textFill="WHITE">
                             <font>
-                                <Font name="Arial Bold" size="12.0" />
+                                <Font name="System Bold" size="12.0" />
                             </font>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
 
-                        <Button fx:id="quickCourseBtn" mnemonicParsing="false" onAction="#quickCourseAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #388e3c; -fx-background-radius: 8;" text="+ Course" textFill="WHITE">
+                        <Button fx:id="quickInstructorBtn" mnemonicParsing="false" onAction="#quickInstructorAction" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #10B981; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(16,185,129,0.3), 6, 0, 0, 2);" text="+ Instructor" textFill="WHITE">
                             <font>
-                                <Font name="Arial Bold" size="12.0" />
+                                <Font name="System Bold" size="12.0" />
                             </font>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
 
-                        <Button fx:id="quickStudentBtn" mnemonicParsing="false" onAction="#quickStudentAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #f57c00; -fx-background-radius: 8;" text="+ Student" textFill="WHITE">
+                        <Button fx:id="quickCourseBtn" mnemonicParsing="false" onAction="#quickCourseAction" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #F59E0B; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(245,158,11,0.3), 6, 0, 0, 2);" text="+ Course" textFill="WHITE">
                             <font>
-                                <Font name="Arial Bold" size="12.0" />
+                                <Font name="System Bold" size="12.0" />
                             </font>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
 
-                        <Button fx:id="quickLessonBtn" mnemonicParsing="false" onAction="#quickLessonAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #7b1fa2; -fx-background-radius: 8;" text="+ Lesson" textFill="WHITE">
+                        <Button fx:id="quickStudentBtn" mnemonicParsing="false" onAction="#quickStudentAction" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #8B5CF6; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(139,92,246,0.3), 6, 0, 0, 2);" text="+ Student" textFill="WHITE">
                             <font>
-                                <Font name="Arial Bold" size="12.0" />
+                                <Font name="System Bold" size="12.0" />
                             </font>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
 
-                        <Button fx:id="quickPaymentBtn" mnemonicParsing="false" onAction="#quickPaymentAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #d32f2f; -fx-background-radius: 8;" text="+ Payment" textFill="WHITE">
+                        <Button fx:id="quickLessonBtn" mnemonicParsing="false" onAction="#quickLessonAction" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #EC4899; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(236,72,153,0.3), 6, 0, 0, 2);" text="+ Lesson" textFill="WHITE">
                             <font>
-                                <Font name="Arial Bold" size="12.0" />
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+
+                        <Button fx:id="quickPaymentBtn" mnemonicParsing="false" onAction="#quickPaymentAction" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #EF4444; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(239,68,68,0.3), 6, 0, 0, 2);" text="+ Payment" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
                             </font>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
@@ -405,20 +432,21 @@
                     </children>
                 </HBox>
 
-                <!-- Featured Courses Section -->
-                <Label layoutX="30.0" layoutY="340.0" text="Featured Courses" textFill="#1a237e">
+                <!-- Recent Activities Section -->
+                <Label layoutX="30.0" layoutY="380.0" text="Recent Activities" textFill="#1E293B">
                     <font>
-                        <Font name="Arial Bold" size="20.0" />
+                        <Font name="System Bold" size="20.0" />
                     </font>
                 </Label>
 
-                <TableView fx:id="featuredCoursesTable" layoutX="30.0" layoutY="370.0" prefHeight="350.0" prefWidth="1060.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                <!-- Recent Activities Table -->
+                <TableView fx:id="recentActivitiesTable" layoutX="30.0" layoutY="410.0" prefHeight="260.0" prefWidth="890.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 3);">
                     <columns>
-                        <TableColumn fx:id="courseIdColumn" minWidth="100.0" prefWidth="120.0" text="Course ID" />
-                        <TableColumn fx:id="courseNameColumn" minWidth="300.0" prefWidth="400.0" text="Course Name" />
-                        <TableColumn fx:id="durationColumn" minWidth="150.0" prefWidth="180.0" text="Duration" />
-                        <TableColumn fx:id="feeColumn" minWidth="150.0" prefWidth="180.0" text="Fee (LKR)" />
-                        <TableColumn fx:id="actionColumn" minWidth="150.0" prefWidth="180.0" text="Action" />
+                        <TableColumn fx:id="activityTimeColumn" minWidth="150.0" prefWidth="180.0" text="Time" />
+                        <TableColumn fx:id="activityTypeColumn" minWidth="120.0" prefWidth="150.0" text="Type" />
+                        <TableColumn fx:id="activityDescriptionColumn" minWidth="300.0" prefWidth="380.0" text="Description" />
+                        <TableColumn fx:id="activityUserColumn" minWidth="100.0" prefWidth="130.0" text="User" />
+                        <TableColumn fx:id="activityStatusColumn" minWidth="50.0" prefWidth="50.0" text="Status" />
                     </columns>
                 </TableView>
 

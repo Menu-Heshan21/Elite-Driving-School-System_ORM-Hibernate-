@@ -18,8 +18,8 @@ public class Initializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        // Load the new main_login.fxml file
-        URL mainLoginURL = getClass().getResource("/view/mainlogin.fxml");
+
+        URL mainLoginURL = getClass().getResource("/view/loginpage.fxml");
         if (mainLoginURL == null) {
             System.err.println("Error: main_login.fxml not found. Please ensure it's in src/main/resources/view/");
             return;
@@ -29,7 +29,8 @@ public class Initializer extends Application {
         Scene scene = new Scene(root);
         primaryStage.setTitle("Driving School Management System");
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
+//        primaryStage.setResizable(false);
+        primaryStage.setMaximized(true);
         primaryStage.centerOnScreen();
         primaryStage.show();
     }
