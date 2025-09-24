@@ -1,11 +1,12 @@
 package lk.ijse.bo.custom;
 
 
+import lk.ijse.bo.SuperBo;
 import lk.ijse.dto.UserDTO;
 
 import java.util.List;
 
-public interface UserBO extends SuperBO {
+public interface UserBO extends SuperBo {
     boolean saveUser(UserDTO dto) throws Exception;
     boolean updateUser(UserDTO dto) throws Exception;
     boolean deleteUser(int id) throws Exception;

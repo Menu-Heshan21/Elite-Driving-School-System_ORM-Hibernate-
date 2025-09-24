@@ -1,12 +1,6 @@
 package lk.ijse.bo;
 
-import lk.ijse.bo.impl.UserBOImpl;
-import lk.ijse.bo.impl.StudentBOImpl;
-import lk.ijse.bo.impl.InstructorBOImpl;
-import lk.ijse.bo.impl.CourseBOImpl;
-import lk.ijse.bo.impl.LessonBOImpl;
-import lk.ijse.bo.impl.PaymentBOImpl;
-import lk.ijse.bo.impl.RoleBOImpl;
+import lk.ijse.bo.custom.impl.*;
 
 public class BOFactory {
 
@@ -29,7 +23,7 @@ public class BOFactory {
         ROLE
     }
 
-    public SuperBO getBO(BOTypes boType) {
+    public SuperBo getBO(BOTypes boType) {
         switch (boType) {
             case USER:
                 return new UserBOImpl();

@@ -1,11 +1,12 @@
 package lk.ijse.bo.custom;
 
-import lk.ijse.bo.SuperBO;
+import lk.ijse.bo.SuperBo;
+import lk.ijse.bo.SuperBo;
 import lk.ijse.dto.RoleDTO;
 
 import java.util.List;
 
-public interface RoleBO extends SuperBO {
+public interface RoleBO extends SuperBo {
     List<RoleDTO> getAllRoles() throws Exception;
     boolean saveRole(RoleDTO dto) throws Exception;
     boolean updateRole(RoleDTO dto) throws Exception;
