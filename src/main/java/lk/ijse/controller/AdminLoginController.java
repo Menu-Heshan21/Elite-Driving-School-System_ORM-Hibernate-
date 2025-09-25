@@ -21,6 +21,7 @@ public class AdminLoginController {
     private static final String ADMIN_USERNAME = "admin";
     private static final String ADMIN_PASSWORD_HASH = "$2a$10$p2imblLJjoi1k7KGSN2S2OLJ9rHz4C9TZpgbQtT2Ezjm1lmUNldgG";
 
+
     public void btnLoginOnAction(ActionEvent event) {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
