@@ -20,7 +20,6 @@ public class UserDTO {
         this.status = status;
     }
 
-    // Getters and Setters
     public int getUserId() {
         return userId;
     }

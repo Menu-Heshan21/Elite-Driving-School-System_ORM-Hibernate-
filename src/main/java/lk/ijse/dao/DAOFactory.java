@@ -38,7 +38,7 @@ public class DAOFactory {
                 return new LessonDAOImpl();
             case PAYMENT:
                 return new PaymentDAOImpl();
-            case ROLE: // Added case for ROLE
+            case ROLE:
                 return new RoleDAOImpl();
             default:
                 return null;

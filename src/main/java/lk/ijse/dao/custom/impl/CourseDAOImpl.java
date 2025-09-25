@@ -22,15 +22,14 @@ public class CourseDAOImpl implements CourseDAO, SuperDAO {
         Session session = null;
         Transaction transaction = null;
         try {
-//            DateFormatSymbols FactoryConfiguration;
             session = FactoryConfiguration.getInstance().getSession();
             transaction = session.beginTransaction();
             Instructor instructor = session.get(Instructor.class, dto.getInstructorId());
             if (instructor == null) {
-                return false; // Instructor not found cannot save course
+                return false;
             }
             Course course = new Course(dto.getName(), dto.getDuration(), dto.getFee(), instructor);
-            session.persist(course); // use persists for new entities
+            session.persist(course);
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -61,7 +60,7 @@ public class CourseDAOImpl implements CourseDAO, SuperDAO {
                     course.setDuration(dto.getDuration());
                     course.setFee(dto.getFee());
                     course.setInstructor(newInstructor);
-                    session.merge(course); // use merge for detached entities
+                    session.merge(course);
                 }
             }
             transaction.commit();
@@ -88,7 +87,7 @@ public class CourseDAOImpl implements CourseDAO, SuperDAO {
             transaction = session.beginTransaction();
             Course course = session.get(Course.class, id);
             if (course != null) {
-                session.remove(course); // use remove for entities
+                session.remove(course);
             }
             transaction.commit();
             return course != null;

@@ -23,8 +23,6 @@ public class StudentDTO {
         this.dob = dob;
     }
 
-    // Getters and Setters
-
     public int getStudentId() {
         return studentId;
     }

@@ -5,7 +5,7 @@ public class UserTM {
     private String username;
     private String email;
     private String password;
-    private String role; // This remains a String for the TableView
+    private String role;
     private String status;
 
     public UserTM() {
@@ -20,7 +20,6 @@ public class UserTM {
         this.status = status;
     }
 
-    // Getters and Setters
     public int getUserId() {
         return userId;
     }
