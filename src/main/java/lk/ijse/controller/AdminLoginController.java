@@ -19,7 +19,7 @@ public class AdminLoginController {
     public PasswordField txtPassword;
 
     private static final String ADMIN_USERNAME = "admin";
-    private static final String ADMIN_PASSWORD_HASH = "$2a$10$p2imblLJjoi1k7KGSN2S2OLJ9rHz4C9TZpgbQtT2Ezjm1lmUNldgG";
+    private static final String ADMIN_PASSWORD_HASH = "$2a$10$5iO8IZQi7s532yGyI86l6.HZQDRttKMcot49Z02T9oO049kNNoQJy";
 
 
     public void btnLoginOnAction(ActionEvent event) {
@@ -29,7 +29,7 @@ public class AdminLoginController {
         if (username.equals(ADMIN_USERNAME) && AdminManager.checkPassword(password, ADMIN_PASSWORD_HASH)) {
             try {
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/dashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Dashboard.fxml"));
                 Parent root = loader.load();
 
                 DashboardController dashboardController = loader.getController();

@@ -1,0 +1,57 @@
+/* --- Global Styles --- */
+.root {
+    -fx-background-color: #F8FAFC; /* A clean, light grey background */
+    -fx-font-family: "Inter", sans-serif; /* A modern, readable font (if installed) */
+}
+
+/* --- Title Label --- */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E293B; /* A dark, professional slate color */
+}
+
+/* --- Base Style for All Role Buttons --- */
+.role-button {
+    -fx-pref-height: 45px;
+    -fx-pref-width: 160px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 10; /* Space between icon and text */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+
+    /* Smooth transition for hover effects */
+    -fx-transition-property: -fx-background-color, -fx-effect;
+    -fx-transition-duration: 0.2s;
+    -fx-transition-timing-function: ease-in-out;
+}
+
+/* --- Specific Style for the Admin Button --- */
+.admin-button {
+    -fx-background-color: #3B82F6; /* A modern, vibrant blue */
+    -fx-text-fill: white;
+}
+
+/* --- Hover Effect for the Admin Button --- */
+.admin-button:hover {
+    -fx-background-color: #2563EB; /* A slightly darker blue on hover */
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.4), 12, 0, 0, 4);
+}
+
+/* --- Specific Style for the Receptionist Button (Outline Style) --- */
+.receptionist-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3B82F6; /* Text color matches the admin button */
+    -fx-border-color: #3B82F6;
+    -fx-border-width: 2;
+}
+
+/* --- Hover Effect for the Receptionist Button --- */
+.receptionist-button:hover {
+    -fx-background-color: #3B82F6; /* Fills with color on hover */
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.4), 12, 0, 0, 4);
+}

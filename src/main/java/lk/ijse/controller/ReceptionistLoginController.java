@@ -29,7 +29,7 @@ public class ReceptionistLoginController {
         if (username.equals(receptionUsername) && ReceptionistManager.checkPassword(password, storedHashedPassword)) {
             try {
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/dashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Dashboard.fxml"));
                 Parent root = loader.load();
 
 
